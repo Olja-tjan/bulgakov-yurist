@@ -1,0 +1,36 @@
+//Text
+$text-main: rgba(11, 27, 59, 1);
+$text-light-header: rgba(255, 255, 255, 1);
+
+//Buttons
+$btn-mobile: rgba(127, 65, 242, 0.65);
+
+$text-highlighted: rgba(88, 94, 222, 1);
+$text-description: rgba(104, 104, 104, 1);
+$text-optional: rgba(188, 191, 254, 1);
+$text-btn-light: rgba(255, 255, 255, 1);
+$text-btn-dark: rgba(88, 94, 222, 1);
+$text-price: rgba(0, 0, 0, 1);
+$text-popular: rgba(217, 217, 217, 1);
+
+//Buttons
+$btn-main-dark: rgba(88, 94, 222, 1);
+$btn-main-light: rgba(255, 255, 255, 1);
+$btn-border-dark: rgba(88, 94, 222, 1);
+$btn-cut: rgba(245, 241, 253, 1);
+$btn-cut-symbol: rgba(11, 27, 59, 1);
+$btn-hovered: rgba(248, 94, 205, 1);
+$btn-hover: rgba(248, 94, 205, 1);
+
+//Additional
+$enumeration-numbers-bgr: rgba(11, 27, 59, 1);
+$enumeration-numbers-symbols: rgba(255, 255, 255, 1);
+$form-bgr: #585ede;
+
+//Mixins
+@mixin font($size, $weight, $lh, $color) {
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $lh;
+	color: $color;
+}

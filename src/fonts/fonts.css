@@ -1,0 +1,49 @@
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('Inter-Regular.woff2?v=3.19') format('woff2'),
+		url('Inter-Regular.woff?v=3.19') format('woff');
+}
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url('Inter-Medium.woff2?v=3.19') format('woff2'),
+		url('Inter-Medium.woff?v=3.19') format('woff');
+}
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+	src: url('Inter-Black.woff2?v=3.19') format('woff2'),
+		url('Inter-Black.woff?v=3.19') format('woff');
+}
+@font-face {
+	font-family: 'Hauora';
+	font-style: bold;
+	font-weight: 900;
+	font-display: swap;
+	src: url('Hauora-Bold.woff2') format('woff2'),
+		url('Hauora-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Hauora';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('Hauora-Regular.woff2') format('woff2'),
+		url('Hauora-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Hauora';
+	font-weight: 600;
+	font-display: swap;
+	src: url('Hauora-SemiBold.woff2') format('woff2'),
+		url('Hauora-SemiBold.woff') format('woff');
+}
