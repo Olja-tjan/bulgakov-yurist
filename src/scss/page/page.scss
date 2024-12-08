@@ -1,9 +1,11 @@
 .page {
-	margin: 0 auto;
-	padding: 28px 48px 157px;
-	max-width: 1200px;
+	//margin: 0 auto;
+	padding: 0;
+	padding-bottom: 157px;
+	//max-width: 1200px;
 	display: flex;
 	gap: 80px;
 	flex-direction: column;
-  background-color: #4D4F44;
+  background-color: rgb(194, 103, 103);
+	color: azure;
 }
