@@ -20,7 +20,7 @@ module.exports = {
       {
         test: /\.js$/,
         use: "babel-loader",
-        exclude: "/node_modules/",
+        exclude: /node_modules/,
       },
       {
         test: /\.(png|jpg|gif|webp)$/,
@@ -41,13 +41,22 @@ module.exports = {
         type: "asset",
       },
       {
+        test: /\.ico$/i,
+        type: "asset/resource",
+      },
+      {
         test: /\.(sa|sc|c)ss$/,
         use: [
           production ? MiniCssExtractPlugin.loader : "style-loader",
           {
             loader: "css-loader",
             options: {
-              sourceMap: true,
+              modules: {
+                mode: "local",
+                localIdentName: "[name]__[local]__[hash:base64:5]",
+                auto: /\.module\.\w+$/i,
+              },
+              importLoaders: 2, //Значение 2 говорит о том, что некоторые трансформации PostCSS нужно применить до css-loader.
             },
           },
           "postcss-loader",
@@ -63,6 +72,11 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".json"],
+    alias: {
+      fonts: path.resolve(__dirname, "..", "./src/fonts"),
+      src: path.resolve(__dirname, "..", "./src"),
+      components: path.resolve(__dirname, "..", "./src/components"),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -70,7 +84,9 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: "static/styles/[name].[contenthash].css",
+      filename: production
+        ? "static/styles/[name].[contenthash].css"
+        : "static/styles/[name].css",
     }),
     new webpack.EnvironmentPlugin({
       NODE_ENV: "development",

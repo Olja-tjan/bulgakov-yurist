@@ -1,5 +1,13 @@
 @use '../vendor/normalize.css';
 @use './fonts';
 
+@import './variables';
 @import './page/page.scss';
+@import './container/container.scss';
 @import './header/header.scss';
+@import './content/content.scss';
+@import './lead/lead.scss';
+@import './call/call.scss';
+@import './services/services.scss';
+@import './feedback/feedback.scss';
+@import './footer/footer.scss';

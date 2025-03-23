@@ -4,118 +4,272 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="icon" href="../images/court_z9kjzqz3y718.svg">
+
+  <title>Юридические услуги в Минусинске - Булгаков Тимофей Валерьевич</title>
+
+  <link rel="icon" href="<%=require('../pages/favicon.svg')%>" type="image/svg+xml" sizes="any">
+  <link rel="icon" href="<%=require('../pages/favicon.ico')%>" type="image/x-icon" sizes="16x16">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16">
+  <link rel="apple-touch-icon" sizes="57x57" href="/static/images/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/static/images/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/static/images/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/images/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/static/images/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/static/images/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/static/images/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/static/images/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/images/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/static/images/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/static/images/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-config" content="/icons/browserconfig.xml">
+  <meta name="msapplication-TileColor" content="#121212">
+  <meta name="msapplication-TileImage" content="/static/images/favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#121212">
 </head>
 
 <body class="page">
   <header class="header">
-    <div class="header__content">
-      <img class="header__logo" alt="логотип сайта" src="<%=require('../images/logo/logo.svg')%>">
+    <div class="container">
+      <img class="header__logo" alt="логотип сайта" src="<%=require('../images/logo.svg')%>">
       <nav class="header__menu">
         <ul class="header__menu-list">
-          <li><a class="header__menu-link" href="">Главная</a></li>
-          <li><a class="header__menu-link" href="">Услуги и цены</a></li>
-          <li><a class="header__menu-link" href="">Контакты</a></li>
+          <li class="header__item"><a class="header__menu-link" href="#services-link">Услуги</a></li>
+          <li class="header__item"><a class="header__menu-link" href="#feedback-link">Отзывы</a></li>
+          <li class="header__item"><a class="header__menu-link" href="#footer-link">Контакты</a></li>
         </ul>
       </nav>
       <address class="header__contacts">
         <a class="header__phone" href="tel:+79029794913" aria-label="Номер телефона юриста">+7-902-979-49-13</a>
         <ul class="header__messenger">
-          <li><a class="header__messenger-link" href=""><img class="header__messenger-icon" alt="" src="<%=require('../images/messengers/whatsapp/whatsapp_1.svg')%>"></a></li>
-          <li><a class="header__messenger-link" href=""><img class="header__messenger-icon" alt="" src="<%=require('../images/messengers/viber/viber_1.svg')%>"></a></li>
-          <li><a class="header__messenger-link" href=""><img class="header__messenger-icon" alt="" src="<%=require('../images/messengers/telegram/telegram_1.svg')%>"></a></li>
+          <li class="header__item">
+            <a class="header__messenger-link" href="https://wa.me/79029794913" target="_blank">
+              <svg class="header__messenger-icon header__messenger-icon_whatsapp" alt="Whatsapp - ссылка для связи"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="m16.15 7.85-.03-.03a5.826 5.826 0 0 0-9.311 6.763l.256.504-.477 2.319-.007.03 2.303-.546.525.266a5.833 5.833 0 0 0 6.712-1.091 5.825 5.825 0 0 0 .03-8.208l-.001-.007Zm-.235 6.508c-.282.444-.728.987-1.289 1.122-.981.239-2.488.008-4.363-1.739l-.023-.021c-1.65-1.528-2.077-2.8-1.974-3.81.058-.573.535-1.09.937-1.43a.537.537 0 0 1 .839.193l.607 1.371a.53.53 0 0 1-.067.546l-.307.398a.53.53 0 0 0-.048.582c.172.3.584.744 1.04 1.155.514.463 1.082.887 1.442 1.033a.524.524 0 0 0 .572-.122l.355-.358a.545.545 0 0 1 .532-.137l1.442.41a.546.546 0 0 1 .305.807Z" />
+                <path
+                  d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Zm7.436 12.177a7.442 7.442 0 0 1-10.748 6.424l-3.757.89a.29.29 0 0 1-.35-.34l.789-3.833a7.44 7.44 0 1 1 14.066-3.137v-.004Z" />
+              </svg>
+            </a>
+          </li>
+          <li class="header__item">
+            <a class="header__messenger-link" href="" target="_blank">
+              <svg class="header__messenger-icon header__messenger-icon_mail" alt="Яндекс почта - ссылка для связи"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0ZM5.378 17.215h13.244a.997.997 0 0 0 .3-.046l.45-.142-5.454-5.048-1.646 1.268a.446.446 0 0 1-.545 0l-1.645-1.268-5.455 5.048.451.142c.097.03.198.046.3.046Zm3.988-5.789L4.383 7.584v8.454l4.983-4.612Zm2.634.905 7.193-5.546H4.807L12 12.33Zm7.617 3.707V7.584l-4.983 3.842 4.983 4.612Z" />
+              </svg>
+            </a>
+          </li>
+          <li class="header__item">
+            <a class="header__messenger-link" href="https://t.me/Timothy1306" target="_blank">
+              <svg class="header__messenger-icon header__messenger-icon_telegram" alt="Telegram - ссылка для связи"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="m16.818 8.502-6.086 4.975-.287.234a.309.309 0 0 0-.114.202l-.064.53-.176 1.486a.068.068 0 0 1-.062.074.068.068 0 0 1-.074-.062l-.495-1.487-.512-1.52a.306.306 0 0 1 .147-.363l6.333-3.63 1.192-.681c.173-.101.35.117.198.242Z" />
+                <path
+                  d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Zm7.485 6.946-2.343 10.352c-.11.485-.726.705-1.159.409l-3.537-2.4-1.801 1.703a.62.62 0 0 1-.999-.22l-.65-1.91-.65-1.91-3.487-.954a.453.453 0 0 1-.04-.874L18.29 6.29l.248-.089c.523-.182 1.063.24.948.746Z" />
+              </svg>
+            </a>
+          </li>
         </ul>
       </address>
     </div>
   </header>
 
   <main class="content">
+
     <section class="lead">
-      <p>Юрист</p>
-      <h1 class="lead__title">Булгаков Тимофей Валерьевич</h1>
-      <hr>
-      <p class="lead__phone">+7-902-979-49-13</p>
-      <p class="lead__subtitle">Юрист в Минусинске</p>
+      <div class="container">
+        <div class="lead__wrapper">
+          <h3 class="lead__caption">Юрист</h3>
+          <h1 class="lead__title">Булгаков Тимофей Валерьевич</h1>
+          <hr class="lead__line">
+          <a class="lead__phone" href="tel:+79029794913" aria-label="Номер телефона юриста">+7-902-979-49-13</a>
+          <h3 class="lead__subtitle">Юрист в Минусинске</h3>
+        </div>
+      </div>
     </section>
-    <section class="services">
-      <h2 class="section__title">Предоставляемые услуги</h2>
-      <ul class="cards">
 
-        <!-- Сделать темплейтом -->
-        <li class="cards__item">
-          <img class="cards__image" src="" alt="иконка">
-          <p class="cards__description">Название услуги</p>
-        </li>
-        <li class="cards__item">
-          <img class="cards__image" src="" alt="иконка">
-          <p class="cards__description">Название услуги</p>
-        </li>
-        <li class="cards__item">
-          <img class="cards__image" src="" alt="иконка">
-          <p class="cards__description">Название услуги</p>
-        </li>
+    <div class="call">
+      <div class="container">
+        <form class="call__form" action="URL" method="post" name="form-order-call">
+          <input class="call__input" type="text" name="name" id="name" placeholder="Имя" value="" required minlength="2"
+            maxlength="40" pattern="^[a-zA-Zа-яА-ЯЁё\s\-]+$"
+            data-error-message="Разрешены только латинские буквы, кириллические буквы, знаки дефиса и пробелы">
+          <input class="call__input" type="tel" name="phone" id="phone" placeholder="Телефон" required>
+          <button class="call__submit" type="submit">Заказать звонок</button>
+        </form>
+      </div>
+    </div>
 
-      </ul>
+    <section class="services" id="services-link">
+      <div class="container">
+        <h2 class="services__title">Услуги</h2>
+        <ul class="services__cards">
+          <li class="services__card">
+            <img class="services__icon" src="<%=require('../images/icons/icon_court-house.svg')%>" alt="иконка">
+            <ul class="services__items">
+              <li class="services__item">
+                <p class="services__description">Отмена судебных приказов</p>
+              </li>
+              <li class="services__item">
+                <p class="services__description">Возврат денежных средств по отмененному судебному приказу</p>
+              </li>
+              <li class="services__item">
+                <p class="services__description">Снятие запретов с авто</p>
+              </li>
+            </ul>
+          </li>
+          <li class="services__card">
+            <img class="services__icon" src="<%=require('../images/icons/icon_scales.svg')%>" alt="иконка">
+            <ul class="services__items">
+              <li class="services__item">
+                <p class="services__description">Снижение процентов удержаний из пенсий и зарплат</p>
+              </li>
+              <li class="services__item">
+                <p class="services__description">Возврат страховок по кредиту</p>
+              </li>
+            </ul>
+          </li>
+          <li class="services__card">
+            <img class="services__icon" src="<%=require('../images/icons/icon_court-gavel.svg')%>" alt="иконка">
+            <ul class="services__items">
+              <li class="services__item">
+                <p class="services__description">Составление исковых заявлений</p>
+              </li>
+              <li class="services__item">
+                <p class="services__description">Банкротство Физических лиц, через МФЦ</p>
+              </li>
+              <li class="services__item">
+                <p class="services__description">Сопровождение в службе судебных приставов</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </section>
+
+    <section class="feedback" id="feedback-link">
+      <div class="container">
+        <h2 class="feedback__title">Отзывы</h2>
+        <div class="feedback__wrapper">
+          <button class="feedback__arrow feedback__arrow_left">
+            <svg alt="Стрелка в лево" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 39 66">
+              <path class="feedback__arrow-image" fill="#121212"
+                d="m13.549 32.997 23.808-23.53a5.5 5.5 0 0 0 0-7.843c-2.191-2.165-5.744-2.165-7.935 0L1.643 29.079a5.5 5.5 0 0 0 0 7.842l27.779 27.455c2.19 2.165 5.744 2.165 7.935 0a5.5 5.5 0 0 0 0-7.843L13.549 32.997Z" />
+            </svg>
+          </button>
+          <ul class="feedback__items">
+            <li class="feedback__item">
+              <h3 class="feedback__name">
+                Иван И.
+              </h3>
+              <p class="feedback__comment">Я очень доволен услугами юридического бюро защита! Они профессионально и
+                оперативно помогли мне решить "застоявшийся" судебный вопрос . Внимание за задаче всегда на высоте,
+                ответы
+                на вопросы, предоставили исчерпывающую информацию и предложили эффективное решение. Я благодарен за их
+                компетентность и отзывчивость. Рекомендую всем, кто ищет надежную юридическую поддержку!</p>
+            </li>
+            <li class="feedback__item">
+              <h3 class="feedback__name">
+                Иван И.
+              </h3>
+              <p class="feedback__comment">Я очень доволен услугами юридического бюро защита! Они профессионально и
+                оперативно помогли мне решить "застоявшийся" судебный вопрос . Внимание за задаче всегда на высоте,
+                ответы
+                на вопросы, предоставили исчерпывающую информацию и предложили эффективное решение. Я благодарен за их
+                компетентность и отзывчивость. Рекомендую всем, кто ищет надежную юридическую поддержку!</p>
+            </li>
+            <li class="feedback__item">
+              <h3 class="feedback__name">
+                Иван И.
+              </h3>
+              <p class="feedback__comment">Я очень доволен услугами юридического бюро защита! Они профессионально и
+                оперативно помогли мне решить "застоявшийся" судебный вопрос . Внимание за задаче всегда на высоте,
+                ответы
+                на вопросы, предоставили исчерпывающую информацию и предложили эффективное решение. Я благодарен за их
+                компетентность и отзывчивость. Рекомендую всем, кто ищет надежную юридическую поддержку!</p>
+            </li>
+            <li class="feedback__item">
+              <h3 class="feedback__name">
+                Иван И.
+              </h3>
+              <p class="feedback__comment">Я очень доволен услугами юридического бюро защита! Они профессионально и
+                оперативно помогли мне решить "застоявшийся" судебный вопрос . Внимание за задаче всегда на высоте,
+                ответы
+                на вопросы, предоставили исчерпывающую информацию и предложили эффективное решение. Я благодарен за их
+                компетентность и отзывчивость. Рекомендую всем, кто ищет надежную юридическую поддержку!</p>
+            </li>
+            <li class="feedback__item">
+              <h3 class="feedback__name">
+                Иван И.
+              </h3>
+              <p class="feedback__comment">Я очень доволен услугами юридического бюро защита! Они профессионально и
+                оперативно помогли мне решить "застоявшийся" судебный вопрос . Внимание за задаче всегда на высоте,
+                ответы
+                на вопросы, предоставили исчерпывающую информацию и предложили эффективное решение. Я благодарен за их
+                компетентность и отзывчивость. Рекомендую всем, кто ищет надежную юридическую поддержку!</p>
+            </li>
+          </ul>
+          <button class="feedback__arrow feedback__arrow_right">
+            <svg alt="Стрелка в право" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 38 66">
+              <path class="feedback__arrow-image" fill="#121212"
+                d="M24.799 32.997 1.6 9.467c-2.135-2.166-2.135-5.678 0-7.843a5.413 5.413 0 0 1 7.732 0l27.066 27.455c2.135 2.165 2.135 5.677 0 7.842L9.333 64.376a5.413 5.413 0 0 1-7.732 0c-2.135-2.165-2.135-5.677 0-7.843L24.8 32.997Z" />
+            </svg>
+          </button>
+        </div>
+        <button class="feedback__btn">Оставить отзыв</button>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="footer">
-    <div class="footer__column">
-      <h2 class="footer__column-title">Контактная информация</h2>
-      <ul class="footer__column-items">
+  <footer class="footer" id="footer-link">
+    <div class="container">
 
-        <!-- Сделать темплейтом -->
-        <li class="footer__column-item">
-          <p class="footer__column-text">Адрес</p>
+      <ul class="footer__items">
+        <li class="footer__item">
+          <h3 class="footer__title">Адрес:</h3>
+          <p class="footer__text">г. Минусинск, ул. Гоголя, д. 60, оф. 85, цокольный этаж</p>
         </li>
-        <li class="footer__column-item">
-          <p class="footer__column-text">Телефон</p>
+        <li class="footer__item">
+          <h3 class="footer__title">График работы:</h3>
+          <p class="footer__text">Пн-Пт с 9:00 до 18:00</p>
         </li>
-        <li class="footer__column-item">
-          <p class="footer__column-text"></p>
-        </li>
-
-      </ul>      
-    </div>
-    <div class="footer__column">
-      <h2 class="footer__column-title">График работы:</h2>
-      <ul class="footer__column-items">
-
-        <!-- Сделать темплейтом -->
-        <li class="footer__column-item">
-          <p class="footer__column-text"></p>
-        </li>
-        <li class="footer__column-item">
-          <p class="footer__column-text"></p>
-        </li>
-        <li class="footer__column-item">
-          <p class="footer__column-text"></p>
-        </li>
-
       </ul>
-      <ul class="footer__column-links">
 
-        <!-- Сделать темплейтом -->
-        <li class="footer__column-item">
-          <a class="footer__column-link" href="">
-            <img class="footer__column-iсon" src="" alt="иконка - ссылка для связи">
-          </a>
-        </li>
-        <li class="footer__column-item">
-          <a class="footer__column-link" href="">
-            <img class="footer__column-iсon" src="" alt="иконка - ссылка для связи">
-          </a>
-        </li>
-        <li class="footer__column-item">
-          <a class="footer__column-link" href="">
-            <img class="footer__column-iсon" src="" alt="иконка - ссылка для связи">
-          </a>
-        </li>
+      <address class="footer__contacts">
+        <a class="footer__phone" href="tel:+79029794913" aria-label="Номер телефона юриста">+7-902-979-49-13</a>
+        <ul class="footer__messengers">
+          <li class="footer__item">
+            <a class="footer__link" href="https://wa.me/79029794913" target="_blank">
+              <img class="footer__iсon" src="<%=require('../images/messengers/whatsapp_1.svg')%>"
+                alt="Whatsapp - ссылка для связи">
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="" target="_blank">
+              <img class="footer__iсon" src="<%=require('../images/messengers/email_1.svg')%>"
+                alt="Яндекс почта - ссылка для связи">
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="https://t.me/Timothy1306" target="_blank">
+              <img class="footer__iсon" src="<%=require('../images/messengers/telegram_1.svg')%>"
+                alt="Telegram - ссылка для связи">
+            </a>
+          </li>
+        </ul>
+      </address>
 
-      </ul>
     </div>
   </footer>
+
 </body>
 
 </html>

@@ -1,0 +1,63 @@
+.lead {
+  position: relative;
+  width: 100%;
+  height: 646px;
+  background-image: url('src/images/background.png');
+  background-size: cover;
+  clip-path: ellipse(170% farthest-side at top);
+
+  &__wrapper {
+    z-index: 1;
+    max-width: 610px;
+    display: grid;
+    grid-template-rows: repeat(5, min-content);
+    padding: 125px 0;
+  }
+
+  &__caption {
+    margin: 0;
+    @include font(2.25rem, 600, normal, $color-accent);
+  }
+
+  &__title {
+    margin: 0;
+    @include font(4rem, 600, normal, $color-light);
+  }
+
+  &__line {
+    margin: 25px 0;
+    width: 295px;
+    border: 0;
+    border-top: 1px solid #FFF;
+  }
+
+  &__phone {
+    margin: 0;
+    text-decoration: none;
+    @include font(2.5rem, 600, normal, $color-accent);
+    transition: color 0.4s ease-out;
+  }
+
+  &__subtitle {
+    margin: 0;
+    @include font(2.5rem, 600, normal, $color-light);    
+  }
+
+  &__phone:hover {
+    color: $color-hover;
+  }
+}
+
+/* псевдоэлемент для затемнения фона */
+.lead::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #1A150E;
+  opacity: 0.7;
+}
+
+.lead .container {
+  display: grid;
+}

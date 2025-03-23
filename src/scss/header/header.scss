@@ -1,19 +1,15 @@
 .header {
   width: 100%;
-  padding: 16px 0 16px;
-  background-color: rgb(0, 0, 0);
-
-    &__content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      gap: 24px;
-      grid-template-columns: min-content auto max-content;
-      align-items: center;
-    }
+  padding: 20px 0;
+  background-color: $color-dark;
+  @include font(1.5rem, 400, 1, $color-light);
 
     &__logo {
-      height: 64px;
+      height: 85px;
+    }
+
+    &__item {
+      display: grid;
     }
 
     &__menu {
@@ -26,71 +22,90 @@
         padding: 0;
         display: flex;
         list-style: none;
-        gap: 24px;
+        gap: 20px;
       }
 
       &-link {
         text-decoration: none;
-        color: aliceblue;
+        color: $color-light;
+        transition: color 0.4s ease-out;
+      }
+
+      &-link:hover {
+        color: $color-hover;
       }
     }
 
     &__contacts {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 20px;
     }
 
     &__phone {
       text-decoration: none;
-      color: aliceblue;
+      color: $color-light;
+      font-style: normal;
+      transition: color 0.4s ease-out;
+    }
+
+    &__phone:hover {
+      color: $color-hover;
     }
 
     &__messenger {
-      align-self: start;
       margin: 0;
       padding: 0;
       display: flex;
-      gap: 4px;
+      gap: 8px;
       list-style: none;
 
       &-link {
+        display: grid;
         margin: 0;
+        transition: transform 0.5s ease-out;
+      }
+
+      &-link:hover {
+        transform: scale(110%);
       }
 
       &-icon {
         width: 24px;
+
+        &_whatsapp {
+          fill: $color-light;
+          transition: fill 0.4s ease-out;
+        }
+  
+        &_whatsapp:hover {
+          fill: $color-whatsapp;
+        }
+
+        &_mail {
+          fill: $color-light;
+          transition: fill 0.4s ease-out;
+        }
+  
+        &_mail:hover {
+          fill: $color-mail;
+        }
+
+        &_telegram {
+          fill: $color-light;
+          transition: fill 0.4s ease-out;
+        }
+  
+        &_telegram:hover {
+          fill: $color-telegram;
+        }
       }
     }
 }
 
-
-
-// &__contacts {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: end;
-//   gap: 8px;
-// }
-
-// &__phone {
-//   text-decoration: none;
-//   color: rgb(9, 28, 44);
-// }
-
-// &__messenger {
-//   align-self: start;
-//   margin: 0;
-//   padding: 0;
-//   display: flex;
-//   gap: 4px;
-//   list-style: none;
-
-//   &-link {
-//     margin: 0;
-//   }
-
-//   &-icon {
-//     width: 24px;
-//   }
-// }
+.header .container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: min-content auto max-content;
+  align-items: center;
+}

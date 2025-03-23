@@ -1,6 +1,24 @@
 @font-face {
 	font-family: 'Hauora';
 	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url('../fonts/Hauora-Light.woff2') format('woff2'),
+		url('../fonts/Hauora-Light.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Hauora';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('../fonts/Hauora-Regular.woff2') format('woff2'),
+		url('../fonts/Hauora-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Hauora';
+	font-style: normal;
 	font-weight: 500;
 	font-display: swap;
 	src: url('../fonts/Hauora-Medium.woff2') format('woff2'),
