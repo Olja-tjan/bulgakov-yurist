@@ -1,0 +1,37 @@
+.call {
+  position: relative;
+  min-height: 85px;
+  // max-width: 1240px;
+  // margin: 0 auto;
+
+  &__form {
+    position: absolute;
+    inset: -86px 0 0;
+    padding: 54px 85px;
+    background-color: $color-main;
+    display: grid;
+    grid-template-columns: 1fr 1fr minmax(20px, min-content);
+    gap: 28px;
+  }
+
+  &__input {
+    padding: 15px;
+    border: none;
+    @include font(1rem, 500, normal, $color-dark-light);
+  }
+
+  &__submit {
+    text-transform: uppercase;
+    white-space: nowrap;
+    border: none;
+    background-color: $color-accent;
+    border-radius: 50px;
+    padding: 15px 58px;
+    @include font(1.5rem, 700, normal, $color-dark);
+    transition: background-color 0.4s ease-out;
+  }
+
+  &__submit:hover {
+    background-color: $color-hover;
+  }
+}
