@@ -1,11 +1,11 @@
 .header {
   width: 100%;
-  padding: 20px 0;
+  padding: 0.84em 0;
   background-color: $color-dark;
   @include font(1.5rem, 400, 1, $color-light);
 
     &__logo {
-      height: 85px;
+      height: 3.55em;
     }
 
     &__item {
@@ -13,7 +13,6 @@
     }
 
     &__menu {
-      width: 100%;
       display: flex;
       align-items: center;
 
@@ -22,7 +21,7 @@
         padding: 0;
         display: flex;
         list-style: none;
-        gap: 20px;
+        gap: 0.84em;
       }
 
       &-link {
@@ -30,16 +29,13 @@
         color: $color-light;
         transition: color 0.4s ease-out;
       }
-
-      &-link:hover {
-        color: $color-hover;
-      }
     }
 
     &__contacts {
       display: flex;
-      align-items: center;
-      gap: 20px;
+      justify-content: end;
+      gap: 0.84em;
+      flex-wrap: wrap;
     }
 
     &__phone {
@@ -49,15 +45,11 @@
       transition: color 0.4s ease-out;
     }
 
-    &__phone:hover {
-      color: $color-hover;
-    }
-
     &__messenger {
       margin: 0;
       padding: 0;
       display: flex;
-      gap: 8px;
+      gap: 0.5rem;
       list-style: none;
 
       &-link {
@@ -66,38 +58,22 @@
         transition: transform 0.5s ease-out;
       }
 
-      &-link:hover {
-        transform: scale(110%);
-      }
-
       &-icon {
-        width: 24px;
+        width: 1em;
 
         &_whatsapp {
           fill: $color-light;
           transition: fill 0.4s ease-out;
-        }
-  
-        &_whatsapp:hover {
-          fill: $color-whatsapp;
         }
 
         &_mail {
           fill: $color-light;
           transition: fill 0.4s ease-out;
         }
-  
-        &_mail:hover {
-          fill: $color-mail;
-        }
 
         &_telegram {
           fill: $color-light;
           transition: fill 0.4s ease-out;
-        }
-  
-        &_telegram:hover {
-          fill: $color-telegram;
         }
       }
     }
@@ -105,7 +81,92 @@
 
 .header .container {
   display: grid;
-  gap: 20px;
-  grid-template-columns: min-content auto max-content;
+  gap: 0.84em;
+  grid-template-columns: min-content auto minmax(min-content, max-content);
   align-items: center;
+}
+
+
+@media (hover: hover) {
+  .header {
+
+    &__menu {
+
+      &-link:hover {
+        color: $color-hover;
+      }
+    }
+
+    &__phone:hover {
+      color: $color-hover;
+    }
+
+    &__messenger {
+
+      &-link:hover {
+        transform: scale(110%);
+      }
+
+      &-icon {
+  
+        &_whatsapp:hover {
+          fill: $color-whatsapp;
+        }
+  
+        &_mail:hover {
+          fill: $color-mail;
+        }
+  
+        &_telegram:hover {
+          fill: $color-telegram;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1103px) {
+  .header {
+    font-size: 1.25rem;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .header {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .header {
+
+    &__logo {
+      grid-area: logo;
+    }
+
+    &__menu {
+      justify-self: end;
+      grid-area: navbar;
+    }
+
+    &__contacts {
+      grid-area: contacts;
+    }
+  }
+
+  .header .container {
+    grid-template-areas: 
+      "logo . navbar"
+      "logo . contacts";
+      gap: 0.5em;
+  }
+}
+
+
+@media screen and (max-width: 410px) {
+  .header {
+    font-size: 0.875rem;
+  }
 }

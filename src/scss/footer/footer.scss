@@ -1,12 +1,13 @@
 .footer {
   background-color: $color-dark;
-  padding: 60px 0 92px;
+  padding: 2.5em 0 4em;
+  font-size: 1.5rem;
 
   &__items {
     display: grid;
     margin: 0;
     padding: 0;
-    gap: 38px;
+    gap: 1.6em;
   }
 
   &__item {
@@ -15,39 +16,35 @@
   }
 
   &__title {
-    margin: 0 0 14px;
-    @include font(1.5rem, 600, normal, $color-light);  
+    margin: 0 0 0.6em;
+    @include font(1em, 600, normal, $color-light);
   }
 
   &__text {
     margin: 0;
-    @include font(1.5rem, 300, normal, $color-gray);  
+    @include font(1em, 300, normal, $color-gray);
   }
 
-  &__contacts {    
+  &__contacts {
     display: grid;
     padding: 0;
-    gap: 14px;
+    gap: 0.6em;
     grid-template-rows: min-content min-content;
   }
 
   &__phone {
-    @include font(1.5rem, 600, normal, $color-light);
+    @include font(1em, 600, normal, $color-light);
     font-style: normal;
     text-decoration: none;
     transition: opacity 0.4s ease-out;
   }
 
-  &__phone:hover {
-    opacity: 0.5;
-  }
-
   &__messengers {
-    display: flex;
-    justify-content: end;
     margin: 0;
     padding: 0;
-    gap: 14px;
+    display: flex;
+    justify-content: end;
+    gap: 0.6em;
     list-style: none;
   }
 
@@ -57,16 +54,62 @@
     transition: transform 0.5s;
   }
 
-  &__link:hover {
-    transform: scale(110%);
-  }
-
   &__icon {
-    width: 40px;
+    width: 1.67em;
   }
 }
+
 
 .footer .container {
   display: flex;
   justify-content: space-between;
+}
+
+
+@media (hover: hover) {
+  .footer {
+
+    &__phone:hover {
+      opacity: 0.5;
+    }
+
+    &__link:hover {
+      transform: scale(110%);
+    }
+  }
+}
+
+
+@media screen and (max-width: 1103px) {
+  .footer {
+    font-size: 1.25rem;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .footer {
+    font-size: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 620px) {
+  .footer {
+    &__messengers {
+      justify-content: start;
+    }
+  }
+
+  .footer .container {
+    flex-direction: column;
+    gap: 1.6em;
+  }
+}
+
+
+@media screen and (max-width: 410px) {
+  .footer {
+    font-size: 0.875rem;
+  }
 }

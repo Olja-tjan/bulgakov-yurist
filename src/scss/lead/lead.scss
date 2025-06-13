@@ -1,50 +1,54 @@
 .lead {
   position: relative;
-  width: 100%;
-  height: 646px;
-  background-image: url('src/images/background.png');
+  max-width: 100%;
+  overflow: hidden;
+  background-image: linear-gradient(-66deg, #888270 , #BDBAB0, #F1F2F0);
   background-size: cover;
   clip-path: ellipse(170% farthest-side at top);
+  font-size: 1.5rem;
 
   &__wrapper {
     z-index: 1;
-    max-width: 610px;
-    display: grid;
-    grid-template-rows: repeat(5, min-content);
-    padding: 125px 0;
+    max-width: 25.5em;
+    padding: 5.2em 0;
   }
 
   &__caption {
     margin: 0;
-    @include font(2.25rem, 600, normal, $color-accent);
+    @include font(1.5em, 600, normal, $color-accent);
   }
 
   &__title {
     margin: 0;
-    @include font(4rem, 600, normal, $color-light);
+    @include font(2.67em, 600, normal, $color-light);
   }
 
   &__line {
-    margin: 25px 0;
-    width: 295px;
+    margin: 1em 0;
+    width: 12.3em;
     border: 0;
     border-top: 1px solid #FFF;
   }
 
   &__phone {
+    display: inline-block;
     margin: 0;
     text-decoration: none;
-    @include font(2.5rem, 600, normal, $color-accent);
-    transition: color 0.4s ease-out;
+    @include font(1.67em, 600, normal, $color-accent);
+    transition: color 0.4s ease-out, transform 0.5s ease-out;
   }
 
   &__subtitle {
     margin: 0;
-    @include font(2.5rem, 600, normal, $color-light);    
+    @include font(1.67em, 600, normal, $color-light);
   }
 
-  &__phone:hover {
-    color: $color-hover;
+  &__image {
+    position: absolute;
+    z-index: -1;
+    bottom: -5.2em;
+    right: 0;
+    width: 25.83em;
   }
 }
 
@@ -59,5 +63,76 @@
 }
 
 .lead .container {
+  position: relative;
   display: grid;
+}
+
+@media (hover: hover) {
+  .lead {
+
+    &__phone:hover {
+      color: $color-hover;
+      transform: scale(103%);
+    }
+  }
+}
+
+
+@media screen and (max-width: 1359px) {
+  .lead {
+
+    &__wrapper {
+      padding-top: 2.6em;
+    }
+
+    &__image {
+      bottom: -7.8em;
+    }
+}
+}
+
+
+@media screen and (max-width: 1103px) {
+  .lead {
+    font-size: 1.25rem;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .lead {
+    font-size: 1rem;
+
+    &__wrapper {
+      padding-bottom: 0;
+      margin: 0 auto;
+      display: grid;
+      justify-items: center;
+      text-align: center;
+    }
+
+    &__image {
+      width: 60%;
+      margin: 0 auto;
+      position: relative;
+      bottom: -2.6em;
+    }
+  }
+}
+
+
+@media screen and (max-width: 449px) {
+  .lead {
+    font-size: 0.875rem;
+  }
+}
+
+
+@media screen and (max-width: 410px) {
+  .lead {
+
+    &__image {
+      width: 80%;
+    }
+  }
 }
